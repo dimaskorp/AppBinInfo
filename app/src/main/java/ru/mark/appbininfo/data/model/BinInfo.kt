@@ -1,20 +1,32 @@
 package ru.mark.appbininfo.data.model
 
 data class BinInfo(
-    val country: Country,
-    val bank: Bank,
-    val type: String
+    var number  : Number,
+    var scheme  : String,
+    var type    : String,
+    var brand   : String,
+    var country : Country,
+    var bank    : Bank
 )
 
 data class Country(
-    val name: String,
-    val latitude: Double,
-    val longitude: Double
+    var numeric   : String,
+    var alpha2    : String,
+    var name      : String,
+    var emoji     : String,
+    var currency  : String,
+    var latitude  : Int,
+    var longitude : Int
 )
 
 data class Bank(
-    val name: String,
-    val url: String,
-    val phone: String,
-    val city: String
+    var name  : String,
+    var url   : String,
+    var phone : String,
+    var city  : String
+)
+
+data class Number (
+    var length : Int,
+    var luhn   : Boolean
 )
